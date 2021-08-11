@@ -50,7 +50,7 @@ class TweetData(Dataset):
                     continue
 
     def save(self):
-        filename = "saved_data"
+        filename = "saved_data.pkl"
         filepath = os.path.join(self.dataset_path, filename)
         filehandler = open(filepath, 'wb')
         pickle.dump(self.tweet_dict, filehandler)
