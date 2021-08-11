@@ -8,7 +8,6 @@ import io
 import pickle
 
 
-
 class TweetData(Dataset):
     def __init__(self):
         self.url = "https://archive.ics.uci.edu/ml/machine-learning-databases/00438/Health-News-Tweets.zip"
@@ -52,7 +51,7 @@ class TweetData(Dataset):
 
     def save(self):
         filename = "saved_data"
-        filepath = os.path.join(self.dataset_path,filename)
+        filepath = os.path.join(self.dataset_path, filename)
         filehandler = open(filepath, 'wb')
         pickle.dump(self.tweet_dict, filehandler)
 
