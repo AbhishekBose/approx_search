@@ -12,7 +12,7 @@ import pickle
 class TweetData(Dataset):
     def __init__(self):
         self.url = "https://archive.ics.uci.edu/ml/machine-learning-databases/00438/Health-News-Tweets.zip"
-        self.data_path = os.path.join(os.path.dirname(os.getcwd()), "data")
+        self.data_path = os.path.join(os.path.dirname(os.path.dirname(os.getcwd())), "data")
         if not os.path.exists(self.data_path):
             os.makedirs(self.data_path)
         self.data_file_ext = ".txt"
