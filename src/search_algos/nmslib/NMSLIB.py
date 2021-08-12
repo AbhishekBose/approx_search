@@ -13,8 +13,8 @@ class NMSLIB:
         self.index.addDataPointBatch(self.vectors)
         self.index.createIndex({'post': 2}, print_progress=True)
 
-    def query(self, query_vec):
-        ids, distances = self.index.knnQuery(query_vec, k=10)
+    def query(self, query_vec,k=10):
+        ids, distances = self.index.knnQuery(query_vec, k=k)
         return ids, distances
 
     def query_batch(self, query_vec, k=10):

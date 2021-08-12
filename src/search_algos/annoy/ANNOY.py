@@ -1,8 +1,14 @@
+import os
+import sys
+
 import annoy
 import numpy
 
+sys.path.append(os.path.dirname(os.getcwd()))
+from ANN import ANN
 
-class ANNOY:
+
+class ANNOY(ANN):
     def __init__(self, vectors):
         self.dimension = vectors.shape[1]
         self.vectors = vectors.astype('float32')
